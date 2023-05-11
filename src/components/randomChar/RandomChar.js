@@ -41,7 +41,7 @@ const RandomChar = (props) =>  {
       
         const errorMassage = error ? <ErrorMassage/> : null;
         const spinner = loading ? <Spinner/> : null;
-        const content = !(loading || error) ? <View char={char}/> : null;
+        const content = loading || error ? null : <View char={char}/>;
 
     
         return (

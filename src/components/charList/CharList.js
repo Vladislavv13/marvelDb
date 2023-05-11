@@ -31,10 +31,11 @@ const CharList = (props) => {
     }
 
 
-   const onCharListLoaded = (newCharList) => {
-                let ended = false;
-                if(newCharList.length < 9) {
-                    ended = true;
+   const onCharListLoaded =  (newCharList) => {
+               
+        let ended = false;
+            if(newCharList.length < 9) {
+                ended = true;
                 }
 
         setCharList(charList => [...charList, ...newCharList]);
@@ -100,7 +101,7 @@ const CharList = (props) => {
     const items = renderItems(charList);
 
     const errorMessage = error ? <ErrorMessage/> : null;
-        const spinner = loading && !newItemLoading ? <Spinner/> : null;
+    const spinner = loading && !newItemLoading ? <Spinner/> : null;
         
 
         return (
